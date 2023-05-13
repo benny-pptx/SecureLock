@@ -12,7 +12,7 @@ lcd = lcddriver.lcd()
 lcd.lcd_clear()
 
 # Liste der berechtigten Personen nach ID
-zug_ids = 566903915301 # Fr. Dr. Voss
+profil_voss = 566903915301 # Fr. Dr. Voss
 
 # Abfrage der Berechtigung und ausgeben des Status der "Tür-Lesers"
 while True:
@@ -24,12 +24,12 @@ while True:
 		id, text = reader.read()
 		print("Kartennummer: {}".format(id))
 
-		if id == zug_ids:
+		if id == profil_voss:
 			print("Zutritt gewährt")
 			print("Guten Tag Dr. " + text)
 			lcd.lcd_display_string("Karte gelesen", 1)
 			lcd.lcd_display_string("Zutritt gewaehrt", 2)
-			time.sleep(1.5)
+			time.sleep(2.5)
 			lcd.lcd_clear() # Wichtig sonst Display doof :(
 
 		else:
