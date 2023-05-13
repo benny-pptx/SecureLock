@@ -8,6 +8,13 @@ Bauteile, welche hierfür verwendet werden:
   4. ein Fingerabdrucksensor
   5. ein Servomotor mit "Schranke"
 
+Hierfür verwendete Bibliotheken:
+  1. cv2
+  2. RPi.GPIO
+  3. mfrc522
+  4. time
+  5. lcddriver
+
 Ziel des Ganzen ist es, dass mehrere Profile mit mehreren Authentifizierungsmethoden möglich sein sollen und somit mehrere Fallbeispiele abgedeckt werden!
 Beispielhaft soll so ein LCD-Display als eine kleine Klartextausgabe fungieren und Anweisungen sowie Infos ausgeben.
 Das RFID-Modul soll mittels Karten, welche verschiedenen Personen gehören, eine haptische Authentifizierung ermöglichen.
