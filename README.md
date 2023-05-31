@@ -3,7 +3,7 @@ Ein Hochsicherheitssystem zur Überprüfung und Validierung an elektronischen T�
 
 Bauteile, welche hierfür verwendet werden:
   1. ein RFID-Modul (MFRC522)
-  2. eine RasPi Kamera
+  2. eine RasPi Kamera (nativer RPi Kamera Anschluss)
   3. ein 16x2 LCD Display
   4. ein Fingerabdrucksensor
   5. ein Servomotor mit "Schranke"
@@ -15,7 +15,9 @@ Hierfür verwendete Bibliotheken:
   4. time
   5. lcddriver
 
-Ziel des Ganzen ist es, dass mehrere Profile mit mehreren Authentifizierungsmethoden möglich sein sollen und somit mehrere Fallbeispiele abgedeckt werden!
+Ausgangsszenario des Projekts ist eine elektronisch verschlossene Tür, welche geöffnet werden soll. Verschiedene Möglichkeiten zur Authentifizierung sollen möglich sein. Ein Alles-in-Allem-Paket mit allen möglichen Authentifizierungen oder aber weniger umfangreiche Versionen mit weniger Authentifizierungsmethoden. Beispielhaft wäre, dass der Ausweis, die Kamera und der Fingerabdrucksensor gleichzeitig zur Authentifizierung genutzt werden. Es wäre ebenfalls denkbar, dass eine Kamera Authentifizierung nicht gewünscht ist (aufgrund von Datenschutzbedenken oder ähnlichem) und lediglich Fingerabdruck und Karte verwendet werden. 
+Ziel des Projekts ist, dass mehrere Authentifizierungsmethoden, mehrere Fallbeispiele abdecken.
+
 Beispielhaft soll so ein LCD-Display als eine kleine Klartextausgabe fungieren und Anweisungen sowie Infos ausgeben.
 Das RFID-Modul soll mittels Karten, welche verschiedenen Personen gehören, eine haptische Authentifizierung ermöglichen.
 Die RasPi Kamera soll einer Gesichtserkennung dienen.
