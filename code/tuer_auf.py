@@ -3,9 +3,7 @@ import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
 import lcddriver
 import time
-#import cv2
 import logging
-import logging.config
 
 # Deklaration für die notwendigen Gerätschaften
 reader = SimpleMFRC522()
@@ -26,7 +24,7 @@ logging.basicConfig(filename='tuer_auf.log', encoding='utf-8', level=logging.DEB
 logging.info('Hier beginnt das Log')
 
 # Liste der berechtigten Personen nach ID
-zug_ids = 566903915301 # Fr. Dr. Voss, Deklaration einer Hilfsvariable
+zug_ids = 566903915301 # Dr. Voss, Deklaration einer Hilfsvariable
 
 # Abfrage der Berechtigung und ausgeben des Status der "Tür-Lesers"
 while True:
@@ -43,7 +41,6 @@ while True:
 			print("Guten Tag Dr. " + text)
 			lcd.lcd_display_string("Karte gelesen", 1)
 			lcd.lcd_display_string("Zutritt gewaehrt", 2)
-			# time.sleep(1.5)
 			servo.ChangeDutyCycle(7.5)
 			time.sleep(1)
 			servo.ChangeDutyCycle(2.5)
