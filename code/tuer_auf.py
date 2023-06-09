@@ -4,6 +4,8 @@ from mfrc522 import SimpleMFRC522
 import lcddriver
 import time
 import logging
+import sys
+import signal
 
 # Deklaration für die notwendigen Gerätschaften
 reader = SimpleMFRC522()
@@ -25,6 +27,12 @@ logging.info('Hier beginnt das Log')
 
 # Liste der berechtigten Personen nach ID
 zug_ids = 566903915301 # Dr. Voss, Deklaration einer Hilfsvariable
+
+# Funtion um das Skript sauber zu beenden
+def signal_handler(sig, frame):
+	sys.exit(0)
+	
+signal.signal(signal.SIGINT, signal_handler)
 
 # Abfrage der Berechtigung und ausgeben des Status der "Tür-Lesers"
 while True:
