@@ -5,7 +5,7 @@ import lcddriver
 import time
 import logging
 import sys
-import signal
+import signa
 
 # Deklaration für die notwendigen Gerätschaften
 reader = SimpleMFRC522()
